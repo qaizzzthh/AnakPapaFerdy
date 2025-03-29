@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style */
+body {
+    background-image: url("pattern bg/islamic.jpg");
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFE0;
+}
+
+.judul {
+    font-size: 2em;
+    color: #FFFFE0;
+    text-shadow: 0 0 15px #77815C; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.desk {
+    font-size: 1.5em;
+    color: #FFFFE0;
+    font-weight: bold;
+    text-shadow: 0 0 20px #77815C; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: block;
+    background-color: #6B8E23;
+    padding: 10px;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-radius: 2em;
+    font-weight: bold;
+    color: #FFFFE0;
+    text-shadow: 0 0 5px #77815C;
+    box-shadow: inset 0 0 20px #264E36, 0 0 10px #4B4B4B;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    font-size: 1.35em;
+    transition: 0.3s;
+}
+
+img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 1s, opacity 1s;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Add a dark background */
+}
+
+.overlay:target {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 728px) {
+    li {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.1em;
+    }
+
+    .judul, .desk {
+        font-size: 1.5em;
+    }
+
+    img {
+        max-width: 80%;
+        margin-top: 30%;
+    }
+}
